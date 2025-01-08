@@ -149,13 +149,13 @@
     <div class="homepage">
         <img src="myntra images/homepageimg.jpeg.jpg" alt="homepage">
     </div>
-     <!-- Vertical Container with Offer Text -->
-  <div class="vertical-container">
-    <div class="offer-text">
-      FLAT Rs.200 OFF<i class='bx bxs-right-arrow'></i>
+    <!-- Vertical Container with Offer Text -->
+    <div class="vertical-container">
+        <div class="offer-text">
+            FLAT Rs.200 OFF<i class='bx bxs-right-arrow'></i>
 
+        </div>
     </div>
-  </div>
 
     <!-- bell icon animation -->
     <div class="bell-icon">
@@ -203,6 +203,7 @@
         // Set interval for automatic sliding
         setInterval(changeSlide, 3000); // Change slide every 3 seconds
     </script>
+    <!-- caroussel slides ends -->
     <!-- Dots (indicators) -->
     <div class="carousel-dots">
         <span class="dot active" data-slide="0"></span>
@@ -212,25 +213,25 @@
     <!-- script for dot indicators -->
     <script>
         const carouselInner1 = document.querySelector('.carousel-inner');
-        const slides1 = document.querySelectorAll('.carousel-item');
+        const slide = document.querySelectorAll('.carousel-item');
         const dots = document.querySelectorAll('.dot');
-        const totalSlides1 = slides.length;
+        const totalSlide = slide.length;
         let index1 = 0;
 
         // Function to change slides
         function changeSlide(slideIndex) {
-            index = slideIndex; // Update the current slide index
-            carouselInner.style.transform = `translateX(-${index * 100}%)`;
+            index1 = slideIndex; // Update the current slide index
+            carouselInner.style.transform = `translateX(-${index1 * 100}%)`;
 
             // Update active dot
             dots.forEach((dot) => dot.classList.remove('active'));
-            dots[index].classList.add('active');
+            dots[index1].classList.add('active');
         }
 
         // Automatic slide transition
         setInterval(() => {
-            index = (index + 1) % totalSlides;
-            changeSlide(index);
+            index1 = (index1 + 1) % totalSlides;
+            changeSlide(index1);
         }, 3000);
 
         // Add event listeners to dots
@@ -240,20 +241,24 @@
                 changeSlide(slideIndex);
             });
         });
+
         // Function to change slides
-        function changeSlide(slideIndex) {
-            index = slideIndex; // Update the current slide index
-            carouselInner.style.transform = `translateX(-${index * 100}%)`;
+        function changeSlide(slideIndex1) {
+            index = slideIndex1; // Update the current slide index
+            carouselInner.style.transform = `translateX(-${index1 * 100}%)`;
 
             // Update active dot
-            dots.forEach((dot) => dot.classList.remove('active'));
-            dots[index].classList.add('active');
+            if (dots[index1]) {
+                dots.forEach((dot) => dot.classList.remove('active'));
+                dots[index1].classList.add('active');
+            }
+
         }
 
         // Automatic slide transition
         setInterval(() => {
-            index = (index + 1) % totalSlides;
-            changeSlide(index);
+            index1 = (index1 + 1) % totalSlide;
+            changeSlide(index1);
         }, 3000);
 
         // Add event listeners to dots
@@ -796,8 +801,9 @@
             <br>
             <br>
             <br>
-</section>
- 
+    </section>
+
 
 </body>
+
 </html>
