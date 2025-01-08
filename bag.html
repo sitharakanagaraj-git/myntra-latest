@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAG</title>
+    <link rel="icon" href="myntra images/myntralogo.avif" type="image/x-icon" ;>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-left .logo {
+  height: 60px;
+  width: auto;
+}
+
+.nav-center {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #8f8888;
+  font-size: 13px;
+  transition: color 0.3s ease;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.nav-center a:hover {
+  color: #ff3e6c;
+}
+
+.nav-right .secure-image {
+  height: 70px;
+  width: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-center {
+    gap: 20px;
+    margin: 10px 0;
+  }
+}
+
+
+        /* Container for the login content */
+        .login-container {
+            background-color: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            align-items: center;
+            margin-left: 540px;
+        }
+
+        /* Heading Styling */
+        .login-container h2 {
+            font-size: 16px;
+            margin-bottom: 100px;
+            color: #333;
+        }
+
+        /* Description Styling */
+        .login-container p {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        /* Button Styling */
+        .login-btn {
+            color: rgb(244, 9, 87);
+            background-color: rgb(241, 182, 182);
+            padding: 14px 20px;
+            font-size: 13px;
+            width: 80%;
+            border: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect for button */
+        .login-btn:hover {
+            background-color: #d1caca;
+    
+        }
+
+        .login-container img {
+            height: 70%;
+            width: 50%;
+        }
+    </style>
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="myntra images/myntralogo.avif" alt="Myntra Logo" class="logo">
+    </div>
+    <div class="nav-center">
+      <a href="#active">BAG</a>
+      <a href="#">--------ADDRESS</a>
+      <a href="#">--------PAYMENT</a>
+    </div>
+    <div class="nav-right">
+      <img src="myntra images/100%secureimage.png" alt="100% Secure" class="secure-image">
+    </div>
+  </header>
+
+
+    <!-- Login Container -->
+    <div class="login-container">
+        
+        <img src="myntra images/bagimage.jpeg" alt="">
+        <h2>Hey , It feels so light !</h2>
+        <p>There is nothing in your bag,Let's Add some items</p>
+        <button class="login-btn">ADD ITEMS FROM WISHLIST</button>
+    </div>
+
+
+
+</body>
+</html>
