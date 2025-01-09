@@ -136,89 +136,9 @@ a {
     cursor: pointer;
 }
 
-/* media query  for tabulate*/
-@media screen and (max-width: 1440px) {
-    .nav-menu {
-        display: none;
-    }
 
-    .nav-left i {
-        display: none;
-    }
 
-    .img {
-        width: 45px;
-        margin-right: 10px;
-    }
 
-    .header {
-        height: 60px;
-    }
-
-    .search-bar {
-        position: absolute;
-        top: 70px;
-        width: 98%;
-        left: 0;
-        border-radius: 50px;
-        background: white;
-        border: 1px solid #000;
-    }
-
-    .nav-left ul li {
-        display: none;
-    }
-
-    .nav-right div {
-        margin: 0 8px;
-    }
-
-    .nav-right div p {
-        font-size: 10px;
-    }
-}
-
-/* media query  for mobile*/
-@media screen and (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-
-    .nav-left i {
-        display: block;
-    }
-
-    .img {
-        width: 45px;
-        margin-right: 10px;
-    }
-
-    .header {
-        height: 60px;
-    }
-
-    .search-bar {
-        position: absolute;
-        top: 70px;
-        width: 80%;
-        left: 0;
-        border-radius: 50px;
-        background: white;
-        border: 1px solid #000;
-    }
-
-    .nav-left ul li {
-        display: none;
-    }
-
-    .nav-right div {
-        margin: 0 8px;
-    }
-
-    .nav-right div p {
-        font-size: 10px;
-    }
-}
 
 
 
@@ -229,21 +149,23 @@ a {
     margin-top: 150px;
     width: 90%;
     height: 95%;
-}
-
+} 
 /* media query  for tabulate*/
-@media screen and (max-width: 1440px) {
+ @media screen and (max-width: 1440px) {
     .homepage img {
-        display: none;
+        width:50%;
+        height: fit-content;
     }
 }
 
 /* media query  for mobile*/
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
     .homepage img {
-        display: none;
+        width: 70%;
+        height: fit-content;
+        margin-left: 30px;
     }
-}
+}   
 
 /* Container Styling */
 .vertical-container {
@@ -288,6 +210,7 @@ a {
     letter-spacing: 3px;
     /* Adjust space between the letters */
 }
+
 /* bell-icon */
 .bell-icon {
     margin-top: 8px;
@@ -299,7 +222,7 @@ a {
 }
 
 .bell-icon img {
-    width: 75%;
+    width: 40%;
     transform-origin: center;
 }
 
@@ -337,17 +260,21 @@ a {
         transform: rotate(0);
     }
 }
+
 /* For Small Screens (481px to 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
     .bell-icon {
-        margin-top: 12px;
+        margin-top: 60px;
         margin-left: auto;
-        margin-right: auto; /* Center align for tablets */
-        width: 60px; /* Set slightly larger width */
+        margin-right: auto;
+        /* Center align for tablets */
+        width: 60px;
+        /* Set slightly larger width */
     }
 
     .bell-icon img {
-        width: 60%; /* Adjust image size */
+        width: 60%;
+        /* Adjust image size */
     }
 }
 
@@ -355,12 +282,14 @@ a {
 @media (min-width: 769px) and (max-width: 1024px) {
     .bell-icon {
         margin-top: 10px;
-        margin-left: 85%; /* Position slightly to the right */
+        margin-left: 85%;
+        /* Position slightly to the right */
         width: 70px;
     }
 
     .bell-icon img {
-        width: 70%; /* Adjust image size */
+        width: 70%;
+        /* Adjust image size */
     }
 }
 
@@ -368,15 +297,17 @@ a {
 @media (min-width: 1025px) {
     .bell-icon {
         margin-top: 8px;
-        margin-left: 1440px; /* Restore large screen margin */
-        width: 80px; /* Larger icon size */
+        margin-left: 1440px;
+        /* Restore large screen margin */
+        width: 80px;
+        /* Larger icon size */
     }
 
     .bell-icon img {
-        width: 75%; /* Restore original size */
+        width: 75%;
+        /* Restore original size */
     }
 }
-
 /* carossel slides */
 .carousel {
     max-height: 400px;
@@ -414,20 +345,80 @@ a {
     border-radius: 10px;
     margin-left: -300px;
 }
+/* carossel slides */
+/* For larger screens (max-width: 1440px) */
+@media (max-width: 1440px) {
+    .carousel {
+        max-height: 400px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-@media screen and (max-width: 768px) {
     .carousel-item img {
-        display: none;
-        unicode-bidi: isolate;
+        width: 85%;
+        height: auto;
     }
 }
 
-@media screen and (max-width: 1440px) {
+/* For laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .carousel {
+        max-height: 400px;
+        width: 80%;
+        margin-left: auto; /* Center carousel */
+        margin-right: auto;
+    }
+
+    .carousel-inner {
+        margin-top: 10px;
+    }
+
     .carousel-item img {
-        display: none;
-        unicode-bidi: isolate;
+        width: 90%;
+        height: auto;
     }
 }
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .carousel {
+        max-height: 300px;
+        width: 60%;
+        margin-left: 100px; /* Center carousel */
+    }
+
+    .carousel-inner {
+        margin-top: 8px;
+    }
+
+    .carousel-item img {
+        width: 70%; /* Slight padding for images */
+        height: auto;
+    }
+}
+
+
+/* For small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .carousel {
+        max-height: 300px;
+        width: 85%;
+        margin-left: 0; /* Center carousel on small screens */
+    }
+
+    .carousel-inner {
+        margin-top: 5px;
+    }
+
+    .carousel-item img {
+        width: 80%; /* Images take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+
+
 
 /* Dots container */
 .carousel-dots {
@@ -454,13 +445,16 @@ a {
 
 @media screen and (max-width: 768px) {
     .carousel-dots .dot {
-        display: none;
+        width: 10px;
+        height: fit-content;
+        align-items: center;
     }
 }
 
 @media screen and (max-width: 1440px) {
     .carousel-dots .dot {
-        display: none;
+        width: 10px;
+        height: 10px;
     }
 }
 
@@ -574,7 +568,7 @@ a {
     .coupons img {
         width: 100%;
         padding: auto;
-        margin-left: 50px;
+        margin-left:10px;
     }
 }
 
@@ -633,7 +627,7 @@ a {
     .flatoff3 img {
         width: 30%;
         /* Adjust width for tablets */
-        margin-left: auto;
+        margin-left:auto;
         margin-right: auto;
         margin-top: 50px;
         /* Adjust margin */
@@ -657,7 +651,7 @@ a {
     .flatoff3 img {
         width: 100%;
         /* Wider images for mobile */
-        margin-left: auto;
+        margin-left: 5px;
         margin-right: auto;
         margin-top: 15px;
         /* Adjust margin for mobile */
