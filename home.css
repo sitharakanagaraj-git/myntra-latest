@@ -868,6 +868,7 @@ a {
 @media (max-width: 768px) {
     .shop-image>div {
         flex: 0 0 calc(50% - 10px);
+        margin-left:2px;
         /* 2 images per row */
     }
 
